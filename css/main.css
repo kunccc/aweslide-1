@@ -12,7 +12,7 @@ ul, ol {
   width: 100vw;
   z-index: 1;
   opacity: 0;
-  transition: all 250ms ease;
+  transition: all .3s ease;
 }
 .topbar:hover {
   opacity: 1;
@@ -24,70 +24,79 @@ ul, ol {
   display: inline-block;
   cursor: pointer;
 }
-.setting {
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 12;
-  background: #fff;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-}
-.setting .sidebar {
+  z-index: 2;
   width: 200px;
+  height: 100vh;
   background: #252f2d;
   color: #747c7c;
   padding: 30px 20px;
-  position: relative;
+  transform: translateX(-200px);
+  transition: all .3s ease;
 }
-.setting .sidebar .title {
+.sidebar.active {
+  transform: translateX(0);
+}
+.sidebar .title {
   font-size: 30px;
   margin-bottom: 30px;
 }
-.setting .sidebar .iconfont {
+.sidebar .iconfont {
   position: absolute;
   top: 30px;
   right: 10px;
   font-size: 30px;
   cursor: pointer;
-  transition: all 250ms ease;
+  transition: all .3s ease;
 }
-.setting .sidebar .iconfont:hover {
+.sidebar .iconfont:hover {
   color: #fff;
 }
-.setting .sidebar li {
+.sidebar li {
   margin: 16px 0;
   font-size: 14px;
 }
-.setting .sidebar li.active {
+.sidebar li.active {
   color: #fff;
 }
-.setting .sidebar li span {
+.sidebar li span {
   cursor: pointer;
 }
-.setting .content {
+.content {
+  position: fixed;
+  top: 0;
+  left: 200px;
+  z-index: 12;
   width: calc(100vw - 200px);
+  height: 100vh;
   display: none;
   background: #212a29;
   color: #747c7c;
   padding: 30px 20px;
+  transform: translateX(calc(100vw - 200px));
+  transition: all .3s ease;
 }
-.setting .content.active {
+.content.visible {
   display: block;
 }
-.setting .content .title {
+.content.active {
+  transform: translateX(0);
+}
+.content .title {
   font-size: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 1px solid #425351;
 }
-.setting .content textarea {
+.content textarea {
   display: block;
   margin-bottom: 20px;
   width: 400px;
   height: 200px;
 }
-.setting .content button {
+.content button {
   cursor: pointer;
 }

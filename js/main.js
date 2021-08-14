@@ -1,3 +1,5 @@
+const $ = s => document.querySelector(s)
+const $$ = s => document.querySelectorAll(s)
 const isMain = str => (/^#{1,2}(?!#)/).test(str)
 const isSub = str => (/^#{3}(?!#)/).test(str)
 const convert = raw => {
@@ -61,6 +63,41 @@ const convert = raw => {
   }
   return html
 }
+
+const Setting = {
+  init() {
+    this.$settingIcon = $('.icon-setting')
+    this.$sidebar = $('.sidebar')
+    this.$content = $('.content')
+    this.$closeIcon = $('.icon-close')
+    this.bind()
+  },
+  bind() {
+    this.$settingIcon.onclick = () => {
+      this.$sidebar.classList.add('active')
+      this.$content.classList.add('active')
+    }
+    this.$closeIcon.onclick = () => {
+      this.$sidebar.classList.remove('active')
+      this.$content.classList.remove('active')
+    }
+  }
+}
+const Editor = {
+  init() {
+    this.bind()
+  },
+  bind() {
+
+  }
+}
+const App = {
+  init() {
+    [...arguments].forEach(module => module.init())
+  }
+}
+App.init(Setting, Editor)
+
 const loadMarkdown = raw => {
   localStorage.setItem('markdown', raw)
   location.reload()
