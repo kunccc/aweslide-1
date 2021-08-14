@@ -10,9 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/theme/black.css" id="theme">
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_2744850_tav2jg7v4bj.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -32,11 +32,30 @@
 <div class="content">
   <div class="title">内容编辑</div>
   <textarea></textarea>
-  <button class="save">保存</button>
+  <button class="saveMd">保存</button>
 </div>
 <div class="content">
   <div class="title">主题特效</div>
-  <p>各种主题</p>
+  <p class="sub-title">主题</p>
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./imgs/blood.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/beige.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/black.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/league.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/moon.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/night.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/serif.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/simple.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/sky.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/solarized.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/white.png" alt=""></div>
+    </div>
+  </div>
+  <p class="theme"></p>
+  <p class="sub-title">转场</p>
+  <p class="sub-title">对齐</p>
+  <button class="saveTheme">保存</button>
 </div>
 <div class="content">
   <div class="title">下载 PDF</div>
@@ -52,6 +71,7 @@
 <script src="plugin/search/search.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

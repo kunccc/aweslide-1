@@ -113,3 +113,27 @@ button:hover {
 .content button {
   cursor: pointer;
 }
+.content .swiper-container {
+  width: 100%;
+  padding-bottom: 50px;
+}
+.content .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 520px;
+  text-align: center;
+}
+.content .swiper-slide img {
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.content .theme {
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content .sub-title {
+  margin: 20px 0;
+}
