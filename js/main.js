@@ -96,10 +96,30 @@ const Setting = {
 }
 const Editor = {
   init() {
+    let TPL = '# aweslide'
+    this.$saveBtn = $('.save')
+    this.$editor = $('.content textarea')
+    this.$sildes = $('.slides')
+    this.$markdown = localStorage.markdown || TPL
     this.bind()
+    this.start()
   },
   bind() {
-
+    this.$saveBtn.onclick = () => {
+      localStorage.markdown = this.$editor.value
+      location.reload()
+    }
+  },
+  start() {
+    this.$sildes.innerHTML = convert(this.$markdown)
+    this.$editor.value = this.$markdown
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    })
   }
 }
 const App = {
@@ -108,20 +128,3 @@ const App = {
   }
 }
 App.init(Setting, Editor)
-
-const loadMarkdown = raw => {
-  localStorage.setItem('markdown', raw)
-  location.reload()
-}
-const start = () => {
-  let TPL = '# aweslide'
-  document.querySelector('.slides').innerHTML = convert(localStorage.getItem('markdown') || TPL)
-  Reveal.initialize({
-    controls: true,
-    progress: true,
-    center: true,
-    hash: true,
-    plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
-  })
-}
-start()

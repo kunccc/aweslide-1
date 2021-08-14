@@ -4,6 +4,17 @@
 ul, ol {
   list-style: none;
 }
+button {
+  background: #48484e;
+  padding: 4px 8px;
+  color: #d9dfdf;
+  border-radius: 4px;
+  border: none;
+  opacity: .7;
+}
+button:hover {
+  opacity: 1;
+}
 .topbar {
   position: fixed;
   top: 0;
@@ -92,6 +103,11 @@ ul, ol {
   margin-bottom: 20px;
   width: 400px;
   height: 200px;
+  background: #283231;
+  color: #d9dfdf;
+  border: none;
+  border-radius: 4px;
+  outline: none;
 }
 .content button {
   cursor: pointer;
