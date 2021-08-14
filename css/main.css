@@ -1,4 +1,10 @@
-.bar {
+* {
+  box-sizing: border-box;
+}
+ul, ol {
+  list-style: none;
+}
+.topbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,15 +14,80 @@
   opacity: 0;
   transition: all 250ms ease;
 }
-.bar:hover {
+.topbar:hover {
   opacity: 1;
 }
-.bar .iconfont {
+.topbar .iconfont {
   font-size: 50px;
   color: #fff;
   margin: 20px;
   display: inline-block;
+  cursor: pointer;
 }
-.bar .iconfont:hover {
+.setting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.setting .sidebar {
+  width: 200px;
+  background: #252f2d;
+  color: #747c7c;
+  padding: 30px 20px;
+  position: relative;
+}
+.setting .sidebar .title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.setting .sidebar .iconfont {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+.setting .sidebar .iconfont:hover {
+  color: #fff;
+}
+.setting .sidebar li {
+  margin: 16px 0;
+  font-size: 14px;
+}
+.setting .sidebar li.active {
+  color: #fff;
+}
+.setting .sidebar li span {
+  cursor: pointer;
+}
+.setting .content {
+  width: calc(100vw - 200px);
+  display: none;
+  background: #212a29;
+  color: #747c7c;
+  padding: 30px 20px;
+}
+.setting .content.active {
+  display: block;
+}
+.setting .content .title {
+  font-size: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #425351;
+}
+.setting .content textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 200px;
+}
+.setting .content button {
   cursor: pointer;
 }
