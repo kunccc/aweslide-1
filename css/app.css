@@ -35,7 +35,7 @@ button:hover {
 }
 .topbar .iconfont {
   font-size: 50px;
-  color: #fff;
+  color: #eee;
   margin: 20px;
   display: inline-block;
   cursor: pointer;
@@ -72,7 +72,7 @@ button:hover {
   transition: all .4s ease;
 }
 .sidebar .iconfont:hover {
-  color: #fff;
+  color: #eee;
 }
 .sidebar li {
   margin: 20px 0;
@@ -80,9 +80,10 @@ button:hover {
 }
 .sidebar li span {
   cursor: pointer;
+  transition: all .3s ease;
 }
 .sidebar li span.active {
-  color: #fff;
+  color: #eee;
 }
 .content {
   position: fixed;
@@ -207,4 +208,11 @@ button:hover {
 }
 .reveal .slides.top-left {
   text-align: left;
+}
+.content a {
+  color: inherit;
+}
+.content a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
