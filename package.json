@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "http-server -c-1"
+  },
   "devDependencies": {
     "http-server": "^13.0.0"
   }

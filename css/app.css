@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 ul, ol {
@@ -11,6 +13,9 @@ button {
   border-radius: 4px;
   border: none;
   opacity: .7;
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
 }
 button:hover {
   opacity: 1;
@@ -136,4 +141,62 @@ button:hover {
 }
 .content .sub-title {
   margin: 20px 0;
+  display: inline-block;
+}
+.content .dropdown {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid #646464;
+  padding: 4px 4px 6px;
+  background: #323436;
+  color: #bbbbbb;
+}
+.content .dropdown .default {
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+}
+.content .dropdown .default .iconfont {
+  font-size: 12px;
+}
+.content .dropdown .mask {
+  z-index: -1;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 110px;
+}
+.content .dropdown .list {
+  position: absolute;
+  width: 58px;
+  top: 25px;
+  left: 0;
+  z-index: -2;
+  opacity: 0;
+  background: #323436;
+  color: #bbbbbb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: scaleY(.85);
+  transform-origin: top;
+  transition: all 180ms ease-out;
+}
+.content .dropdown .list:first-child {
+}
+.content .dropdown .list.active {
+  opacity: 1;
+  z-index: 10;
+  transform: scaleY(1);
+}
+.content .dropdown .list li {
+  padding: 8px 4px;
+  text-align: center;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.content .dropdown .list li:hover {
+  background: #252f2d;
+}
+.reveal .slides.top-left {
+  text-align: left;
 }

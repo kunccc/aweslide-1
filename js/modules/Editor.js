@@ -23,8 +23,9 @@ const Editor = {
     Reveal.initialize({
       controls: true,
       progress: true,
-      center: true,
+      center: localStorage.alignment !== 'top-left',
       hash: true,
+      transition: localStorage.transition || 'slide',
       plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
     })
   }

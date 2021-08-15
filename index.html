@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <title>aweslide – 极简 Markdown 幻灯片</title>
-  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-  <meta name="author" content="Hakim El Hattab">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="plugin/highlight/monokai.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_2744850_tav2jg7v4bj.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_2744850_hdp9d15gw3.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/app.css">
 </head>
@@ -31,30 +29,60 @@
 </div>
 <div class="content">
   <div class="title">内容编辑</div>
-  <textarea></textarea>
+  <label>
+    <textarea></textarea>
+  </label>
   <button class="saveMd">保存</button>
 </div>
 <div class="content">
   <div class="title">主题特效</div>
-  <p class="sub-title">主题</p>
+  <p class="sub-title">主题：</p>
   <div class="swiper-container mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./imgs/blood.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/beige.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/black.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/league.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/moon.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/night.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/serif.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/simple.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/sky.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/solarized.png" alt=""></div>
-      <div class="swiper-slide"><img src="./imgs/white.png" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/blood.png" alt="blood"></div>
+      <div class="swiper-slide"><img src="./imgs/beige.png" alt="beige"></div>
+      <div class="swiper-slide"><img src="./imgs/black.png" alt="black"></div>
+      <div class="swiper-slide"><img src="./imgs/league.png" alt="league"></div>
+      <div class="swiper-slide"><img src="./imgs/moon.png" alt="moon"></div>
+      <div class="swiper-slide"><img src="./imgs/night.png" alt="night"></div>
+      <div class="swiper-slide"><img src="./imgs/serif.png" alt="serif"></div>
+      <div class="swiper-slide"><img src="./imgs/simple.png" alt="simple"></div>
+      <div class="swiper-slide"><img src="./imgs/sky.png" alt="sky"></div>
+      <div class="swiper-slide"><img src="./imgs/solarized.png" alt="solarized"></div>
+      <div class="swiper-slide"><img src="./imgs/white.png" alt="white"></div>
     </div>
   </div>
   <p class="theme"></p>
-  <p class="sub-title">转场</p>
-  <p class="sub-title">对齐</p>
+  <div>
+    <p class="sub-title">转场：</p>
+    <div class="dropdown">
+      <div class="default"><i class="iconfont icon-down"></i></div>
+      <div class="mask"></div>
+      <div class="list">
+        <ul>
+          <li data-transition="slide">滑动</li>
+          <li data-transition="fade">淡化</li>
+          <li data-transition="convex">凸出</li>
+          <li data-transition="concave">凹陷</li>
+          <li data-transition="zoom">缩放</li>
+          <li data-transition="none">无</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p class="sub-title">对齐：</p>
+    <div class="dropdown">
+      <div class="default"><i class="iconfont icon-down"></i></div>
+      <div class="mask"></div>
+      <div class="list">
+        <ul>
+          <li data-alignment="center">居中</li>
+          <li data-alignment="top-left">左上</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <button class="saveTheme">保存</button>
 </div>
 <div class="content">
