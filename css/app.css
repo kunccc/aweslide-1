@@ -47,8 +47,8 @@ button:hover {
   z-index: 2;
   width: 200px;
   height: 100vh;
-  background: #252f2d;
-  color: #747c7c;
+  background: #323436;
+  color: #999;
   padding: 30px 20px;
   transform: translateX(-100%);
   transition: all .3s ease;
@@ -58,7 +58,10 @@ button:hover {
 }
 .sidebar .title {
   font-size: 30px;
+  color: #bbb;
+  padding-bottom: 30px;
   margin-bottom: 30px;
+  border-bottom: 1px solid #515151;
 }
 .sidebar .iconfont {
   position: absolute;
@@ -66,14 +69,14 @@ button:hover {
   right: 10px;
   font-size: 30px;
   cursor: pointer;
-  transition: all .3s ease;
+  transition: all .4s ease;
 }
 .sidebar .iconfont:hover {
   color: #fff;
 }
 .sidebar li {
-  margin: 16px 0;
-  font-size: 14px;
+  margin: 20px 0;
+  font-size: 16px;
 }
 .sidebar li span {
   cursor: pointer;
@@ -88,11 +91,11 @@ button:hover {
   z-index: 12;
   width: calc(100vw - 200px);
   height: 100vh;
-  background: #212a29;
-  color: #747c7c;
+  background: #3c3f41;
+  color: #999;
   padding: 30px 20px;
   transform: translateX(100%);
-  transition: all .3s ease;
+  transition: all .4s ease;
 }
 .content.active {
   transform: translateX(0);
@@ -101,18 +104,21 @@ button:hover {
   font-size: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #425351;
+  border-bottom: 1px solid #515151;
+  color: #bbb;
 }
 .content textarea {
   display: block;
   margin-bottom: 20px;
-  width: 400px;
-  height: 200px;
-  background: #283231;
-  color: #7b8180;
+  width: 580px;
+  height: 300px;
+  color: inherit;
+  padding: 8px;
+  background: #323436;
   border: none;
   border-radius: 4px;
   outline: none;
+  font-size: 14px;
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 }
 .content button {
@@ -121,6 +127,7 @@ button:hover {
 .content .swiper-container {
   width: 100%;
   padding-bottom: 50px;
+  margin-bottom: 20px;
 }
 .content .swiper-slide {
   background-position: center;
@@ -140,14 +147,14 @@ button:hover {
   transform: translateX(-50%);
 }
 .content .sub-title {
-  margin: 20px 0;
+  margin: 0 0 40px;
   display: inline-block;
 }
 .content .dropdown {
   display: inline-block;
   position: relative;
   border-bottom: 1px solid #646464;
-  padding: 4px 4px 6px;
+  padding: 6px 3px 6px 6px;
   background: #323436;
   color: #bbbbbb;
 }
@@ -158,19 +165,20 @@ button:hover {
 }
 .content .dropdown .default .iconfont {
   font-size: 12px;
+  margin-left: 2px;
 }
 .content .dropdown .mask {
   z-index: -1;
   position: absolute;
   top: 20px;
   left: 0;
-  width: 60px;
+  width: 62px;
   height: 110px;
 }
 .content .dropdown .list {
   position: absolute;
-  width: 58px;
-  top: 25px;
+  width: 62px;
+  top: 27px;
   left: 0;
   z-index: -2;
   opacity: 0;
