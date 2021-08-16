@@ -216,3 +216,12 @@ button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+.content #upload {
+  display: none;
+}
+.content .uploader {
+  cursor: pointer;
+}
+.content .uploader:hover {
+  text-decoration: underline;
+}

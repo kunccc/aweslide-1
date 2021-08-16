@@ -32,6 +32,8 @@
   <label>
     <textarea></textarea>
   </label>
+  <label for="upload" class="uploader">点击上传图片(支持 .png、.jpg、.gif，最大 2M)</label>
+  <input type="file" accept="image/*" id="upload"/>
   <button class="saveMd">保存</button>
 </div>
 <div class="content">
@@ -100,6 +102,7 @@
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="//code.bdstatic.com/npm/leancloud-storage@4.11.1/dist/av-min.js"></script>
 <script type="module" src="js/App.js"></script>
 </body>
 </html>
