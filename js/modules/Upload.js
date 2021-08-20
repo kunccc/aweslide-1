@@ -20,14 +20,14 @@ const Upload = {
       file.save({
         keepFileName: true,
         onprogress: progress => this.insertText(`![上传中，进度${progress.percent}%]()`)
-      }).then(file => this.insertText(`![${file.attributes.name}](${file.attributes.url}?imageView2/0/w/800/h/600)`), err => console.log(err))
+      }).then(file => this.insertText(`![${localFile.name}](${file.attributes.url})`), err => console.log(err))
     }
   },
   start() {
     AV.init({
-      appId: 'VOI2I4mOe4nGnN3F2nJuKDhY-gzGzoHsz',
-      appKey: 'EeeVYDhbHVG1UFMfh0qyKPCj',
-      serverURL: 'https://voi2i4mo.lc-cn-n1-shared.com'
+      appId: '67zWHI3L2bP1LVtCLTyY8EDY-MdYXbMMI',
+      appKey: 'z4Xgqy6vO7jIuymesOz3dGuL',
+      serverURL: 'https://67zwhi3l.engine.lncldglobal.com'
     })
   },
   insertText(text) {
