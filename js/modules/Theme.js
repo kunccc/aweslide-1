@@ -38,12 +38,26 @@ const Theme = {
       location.reload()
     }
     this.$$dropdown.forEach($dropdown => $dropdown.onclick = () => {
-      let classList
-      if ([...this.$$dropdown].indexOf($dropdown) === 0) classList = this.$$dropdownLists[0].classList
-      else classList = this.$$dropdownLists[1].classList;
-      [...classList].indexOf('active') >= 0
-        ? classList.remove('active')
-        : classList.add('active')
+      // let classList
+      // if ([...this.$$dropdown].indexOf($dropdown) === 0) classList = this.$$dropdownLists[0].classList
+      // else classList = this.$$dropdownLists[1].classList;
+      // [...classList].indexOf('active') >= 0
+      //   ? classList.remove('active')
+      //   : classList.add('active')
+
+      if ([...this.$$dropdown].indexOf($dropdown) === 0) {
+        const currentClassList = this.$$dropdownLists[0].classList;
+        [...currentClassList].indexOf('active') >= 0
+          ? currentClassList.remove('active')
+          : currentClassList.add('active')
+        this.$$dropdownLists[1].classList.remove('active')
+      } else {
+        const currentClassList = this.$$dropdownLists[1].classList;
+        [...currentClassList].indexOf('active') >= 0
+          ? currentClassList.remove('active')
+          : currentClassList.add('active')
+        this.$$dropdownLists[0].classList.remove('active')
+      }
     })
     this.$$listItems.forEach($listItem => $listItem.onclick = () => {
       this.$$listItems.forEach($listItem => $listItem.classList.remove('selected'))

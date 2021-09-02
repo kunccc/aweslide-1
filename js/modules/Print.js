@@ -14,7 +14,7 @@ const Print = {
     }
   },
   start() {
-    location.href.match(/print-pdf/gi) && setTimeout(() => print(), 100)
+    location.href.match(/print-pdf/gi) && setTimeout(() => print(), 1000)
   }
 }
 

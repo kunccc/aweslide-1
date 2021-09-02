@@ -211,7 +211,7 @@ img {
   cursor: pointer;
 }
 .content .dropdown .list li:hover {
-  background: #252f2d;
+  background: #3c3f41;
 }
 .reveal .slides.top-left {
   text-align: left;
@@ -235,4 +235,7 @@ img {
 .content .tip {
   opacity: .85;
   margin-top: 16px;
+}
+.content.about p, .content.speaker p {
+  margin: 16px 0;
 }
