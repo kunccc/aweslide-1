@@ -239,3 +239,9 @@ img {
 .content.about p, .content.speaker p {
   margin: 16px 0;
 }
+.content .help {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  font-size: 20px;
+}
