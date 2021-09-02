@@ -3,7 +3,25 @@ import convert from '../libs/convert.js'
 
 const Editor = {
   init() {
-    let TPL = '# aweslide'
+    let TPL = `# AWE SLIDE
+
+## 极简的 Markdown 幻灯片
+
+## 帮助您快速制作简单 PPT 的小能手 😊
+
+## 支持代码 👇
+note: 我是笔记
+###
+\`\`\` javascript
+  Hello World
+\`\`\`
+
+## 支持图片 👇
+### ![dog.jpg](https://lc-gluttony.s3.amazonaws.com/67zWHI3L2bP1/Dl0Hb06MYfWbeoR5aBbzGmuFxOfl7G1h/dog.jpg)
+
+## 支持 PDF 下载和演讲者模式
+
+## 鼠标移至上方点击设置开始使用吧 😎`
     this.$saveBtn = $('.saveMd')
     this.$editor = $('.content textarea')
     this.$sildes = $('.slides')
