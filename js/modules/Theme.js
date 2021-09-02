@@ -22,6 +22,7 @@ const Theme = {
     this.$theme = $('.theme')
     this.$saveBtn = $('.saveTheme')
     this.$slide = $('.slides')
+    this.$settingIcon = $('.icon-setting')
     this.$$dropdown = $$('.default')
     this.$$dropdownLists = $$('.dropdown .list')
     this.$$listItems = $$('.list li')
@@ -62,6 +63,8 @@ const Theme = {
     this.$$dropdown[0].innerHTML = `${this.transitions[this.currentTransition]}<i class="iconfont icon-down"></i>`
     this.$$dropdown[1].innerHTML = `${this.alignments[this.currentAlignment]}<i class="iconfont icon-down"></i>`
     if (localStorage.alignment === 'top-left') this.$slide.classList.add('top-left')
+    const lightThemes = ['beige', 'serif', 'simple', 'sky', 'solarized', 'white']
+    if (lightThemes.indexOf(this.currentTheme) >= 0) this.$settingIcon.classList.add('dark')
   },
   loadSwiper() {
     const {currentIndex} = this
